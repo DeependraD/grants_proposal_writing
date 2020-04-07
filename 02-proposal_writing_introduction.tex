@@ -1,0 +1,339 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames*,x11names*}{xcolor}
+%
+\documentclass[ignorenonframetext,aspectratio=169]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph:
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+\centering
+\begin{beamercolorbox}[sep=16pt,center]{part title}
+  \usebeamerfont{part title}\insertpart\par
+\end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+\centering
+\begin{beamercolorbox}[sep=12pt,center]{part title}
+  \usebeamerfont{section title}\insertsection\par
+\end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+\centering
+\begin{beamercolorbox}[sep=8pt,center]{part title}
+  \usebeamerfont{subsection title}\insertsubsection\par
+\end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+\usetheme[]{Frankfurt}
+\usecolortheme{beaver}
+\usefonttheme{structuresmallcapsserif}
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+            pdftitle={Proposal writing: Introduction},
+            pdfauthor={Deependra Dhakal},
+            colorlinks=true,
+            linkcolor=red,
+            filecolor=Maroon,
+            citecolor=blue,
+            urlcolor=red,
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\newif\ifbibliography
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+% define new footline defination
+\setbeamertemplate{footline}
+{
+    \leavevmode%
+    \hbox{%
+        \begin{beamercolorbox}[wd = .5\paperwidth, ht = 1ex, dp = 1ex, center]{author in head/foot}%
+            Text in footer
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd = .5\paperwidth, ht = 1ex, dp = 1ex, center]{date in head/foot}%
+            \insertframenumber{}
+        \end{beamercolorbox}
+    }%
+    \vskip3pt%
+}
+% add footline defination to the beamer template
+\addtobeamertemplate{footline}{\begin{center}\rule{0.6\paperwidth}{0.4pt}\end{center}\vspace*{-1ex}}{}
+
+% % set background in a TikZ node for modifications
+\usepackage{tikz}
+\usepackage[absolute,overlay]{textpos}
+\setbeamertemplate{title page}{
+\tikz\node[opacity=0.5] {\includegraphics[width=0.8\paperwidth]{the_proposal.jpg}};
+% \begin{textblock}{7.5}(1,2.8)\usebeamerfont{title}
+\begin{textblock}{15}(1.5,2.8)\usebeamerfont{title} % 1.5 is x position in page
+{\color{white}\raggedright\par\inserttitle}
+\end{textblock}
+\begin{textblock}{7.5}(1.5,7) % 1.5 is x position in page
+{\color{white}\raggedright{\insertauthor}\mbox{}\\[0.2cm]
+\insertdate}
+\end{textblock}} % dd_rookie modified, figure is top aligned
+
+% % set caption font size
+% % note that beamer presentation native captions have their own configs
+% \usepackage{caption}
+% \captionsetup{font=footnotesize}
+
+% this font option is amenable for beamer
+\setbeamerfont{caption}{size=\tiny}
+
+% some beamer themes naturally might not support navigation symbols
+% \setbeamertemplate{navigation symbols}{} % remove navigation symbols
+
+\setbeamertemplate{footline}[page number] % insert page number in footline
+
+% \setbeamertemplate{navigation symbols}{slide} % insert slide indication in navigation
+% \setbeamertemplate{navigation symbols}{frame} % insert frame indication in navigation
+% \setbeamertemplate{navigation symbols}{section} % insert section indication in navigation
+% \setbeamertemplate{navigation symbols}{subsection} % insert subsection indication in navigation
+
+% \AtBeginSubsection{} % supress subsection display
+
+\title{Proposal writing: Introduction}
+\author{Deependra Dhakal}
+\providecommand{\institute}[1]{}
+\institute{GAASC, Baitadi \and Tribhuwan University}
+\date{Academic year 2019-2020}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}
+\tableofcontents[hideallsubsections]
+\end{frame}
+\hypertarget{basics}{%
+\section{Basics}\label{basics}}
+
+\hypertarget{organization}{%
+\section{Organization}\label{organization}}
+
+\begin{frame}{Background}
+\protect\hypertarget{background}{}
+
+\begin{itemize}
+\tightlist
+\item
+  the subject domain
+\item
+  connecting two or more domains, if present
+\item
+  is the subject of study extensively researched ?
+\item
+  if researched already what problems have been answered ?
+\item
+  what remains to be answered ?
+\item
+  is there an exception to the problem and solution posed for it earlier
+  ? you could address that.
+\item
+  what are the popular suggestions for the problem, if any ?
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Problem}
+\protect\hypertarget{problem}{}
+
+\begin{itemize}
+\tightlist
+\item
+  how the problem is a problem ?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    human interest
+  \item
+    economic welfare
+  \item
+    ecosystem benefit
+  \end{itemize}
+\item
+  does problem require special conditions to explore
+\item
+  why designing a research study for the problem now is right thing to
+  do?
+
+  \begin{itemize}
+  \tightlist
+  \item
+    why not delay it ?
+  \item
+    how is it an unique problem ?
+  \end{itemize}
+\item
+  write from the perspective of sponsor/reader not yourself
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{What objectives to meet}
+\protect\hypertarget{what-objectives-to-meet}{}
+
+\begin{itemize}
+\tightlist
+\item
+  be very specific
+\item
+  write only that which is verifiable/measurable
+\item
+  indicate immediacy;time frame during which problem will be addressed
+\item
+  practicable
+\item
+  essentially break down the topic
+\item
+  objectives are linearly related to each other; logical order
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{How to meet those objectives}
+\protect\hypertarget{how-to-meet-those-objectives}{}
+
+\begin{itemize}
+\tightlist
+\item
+  hypothesize
+\item
+  experimental runs
+\item
+  recording measurement/data
+\item
+  how are you better equipped than others to conduct a research
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Who will benefit}
+\protect\hypertarget{who-will-benefit}{}
+
+\end{frame}
+
+\begin{frame}{Methods}
+\protect\hypertarget{methods}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Explain why you chose one methodological approach and not another.
+\item
+  Describe the major activities for reaching each objective.
+\item
+  Indicate the key project personnel/group who will carry out each
+  activity.
+\item
+  Show the interrelationship among project activities.
+\item
+  Indicate how it will be feasible with given resources.
+\item
+  What will you observed
+\item
+  What will you analyse
+\item
+  Whay will you infer about
+\item
+  How will you collect data
+\item
+  How will you analyse data
+\item
+  How will you make inference
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Evaluation}
+\protect\hypertarget{evaluation}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Impact evaluation
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Overall value
+  \item
+    Sustainability
+  \item
+    Replicability
+  \end{itemize}
+\item
+  Who can evaluate
+\item
+  How long does the impact hold
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Budget and timeline}
+\protect\hypertarget{budget-and-timeline}{}
+
+\end{frame}
+
+\begin{frame}{References}
+\protect\hypertarget{references}{}
+
+\end{frame}
+
+\begin{frame}{Abstract/summary}
+\protect\hypertarget{abstractsummary}{}
+
+\end{frame}
+
+\end{document}

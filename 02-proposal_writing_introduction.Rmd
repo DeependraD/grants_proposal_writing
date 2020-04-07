@@ -1,0 +1,115 @@
+---
+title: "Proposal writing: Introduction"  
+author:   
+  - Deependra Dhakal 
+institute:   
+  - GAASC, Baitadi
+  - Tribhuwan University 
+date: Academic year 2019-2020 
+output:   
+  beamer_presentation:  
+    incremental: false  
+    theme: "Frankfurt"  
+    colortheme: "beaver"  
+    fonttheme: "structuresmallcapsserif"
+    toc: true   
+    slide_level: 3
+    fig_width: 5  
+    fig_height: 4  
+    fig_caption: true  
+    highlight: tango
+    keep_tex: true
+    includes:
+      in_header: beamer_header.tex
+classoption: "aspectratio=169"
+link-citations: yes  
+urlcolor: red  
+linkcolor: red  
+citecolor: blue
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+require(tidyverse)
+set.seed(453)
+# invalidate cache when the package version changes
+knitr::opts_chunk$set(tidy = FALSE, echo = FALSE, 
+                  message = FALSE, warning = FALSE,
+                  out.width = "50%")
+options(knitr.table.format = "latex")
+options(knitr.kable.NA = "", digits = 2)
+options(kableExtra.latex.load_packages = FALSE)
+```
+
+# Basics
+
+# Organization
+
+### Background
+
+- the subject domain
+- connecting two or more domains, if present
+- is the subject of study extensively researched ?
+- if researched already what problems have been answered ?
+- what remains to be answered ?
+- is there an exception to the problem and solution posed for it earlier ? you could address that.
+- what are the popular suggestions for the problem, if any ?
+
+### Problem
+
+- how the problem is a problem ?
+  - human interest
+  - economic welfare
+  - ecosystem benefit
+- does problem require special conditions to explore
+- why designing a research study for the problem now is right thing to do?
+  - why not delay it ?
+  - how is it an unique problem ?
+- write from the perspective of sponsor/reader not yourself
+
+### What objectives to meet
+
+- be very specific
+- write only that which is verifiable/measurable
+- indicate immediacy;time frame during which problem will be addressed
+- practicable
+- essentially break down the topic
+- objectives are linearly related to each other; logical order
+
+### How to meet those objectives
+
+- hypothesize
+- experimental runs
+- recording measurement/data
+- how are you better equipped than others to conduct a research
+
+### Who will benefit
+
+### Methods
+
+- Explain why you chose one methodological approach and not another.
+- Describe the major activities for reaching each objective.
+- Indicate the key project personnel/group who will carry out each activity.
+- Show the interrelationship among project activities.
+- Indicate how it will be feasible with given resources.
+- What will you observed
+- What will you analyse
+- Whay will you infer about
+- How will you collect data
+- How will you analyse data
+- How will you make inference
+
+### Evaluation
+
+- Impact evaluation
+  - Overall value
+  - Sustainability
+  - Replicability
+- Who can evaluate
+- How long does the impact hold
+
+### Budget and timeline
+
+### References
+
+### Abstract/summary
